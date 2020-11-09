@@ -291,7 +291,8 @@ module Aws::IVS
       :latency_mode,
       :type,
       :authorized,
-      :tags)
+      :tags,
+      :recordingS3BucketName)
       SENSITIVE = []
       include Aws::Structure
     end
