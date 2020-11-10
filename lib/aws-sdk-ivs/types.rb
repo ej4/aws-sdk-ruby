@@ -292,7 +292,7 @@ module Aws::IVS
       :type,
       :authorized,
       :tags,
-      :recordingS3BucketName)
+      :recording_s3_bucket_name)
       SENSITIVE = []
       include Aws::Structure
     end

@@ -27,6 +27,7 @@ module Aws::IVS
     ChannelLatencyMode = Shapes::StringShape.new(name: 'ChannelLatencyMode')
     ChannelList = Shapes::ListShape.new(name: 'ChannelList')
     ChannelName = Shapes::StringShape.new(name: 'ChannelName')
+    ChannelBucketName = Shapes::StringShape.new(name: 'ChannelBucketName')
     ChannelNotBroadcasting = Shapes::StructureShape.new(name: 'ChannelNotBroadcasting')
     ChannelSummary = Shapes::StructureShape.new(name: 'ChannelSummary')
     ChannelType = Shapes::StringShape.new(name: 'ChannelType')
@@ -174,6 +175,7 @@ module Aws::IVS
     CreateChannelRequest.add_member(:type, Shapes::ShapeRef.new(shape: ChannelType, location_name: "type"))
     CreateChannelRequest.add_member(:authorized, Shapes::ShapeRef.new(shape: Boolean, location_name: "authorized"))
     CreateChannelRequest.add_member(:tags, Shapes::ShapeRef.new(shape: Tags, location_name: "tags"))
+    CreateChannelRequest.add_member(:recording_s3_bucket_name, Shapes::ShapeRef.new(shape: ChannelBucketName, location_name: "recordingS3BucketName"))
     CreateChannelRequest.struct_class = Types::CreateChannelRequest
 
     CreateChannelResponse.add_member(:channel, Shapes::ShapeRef.new(shape: Channel, location_name: "channel"))
